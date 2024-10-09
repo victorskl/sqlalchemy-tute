@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: public.ecr.aws/docker/library/postgres:15.4
+    restart: always
+    environment:
+      - POSTGRES_DB=alembic
+      - POSTGRES_USER=alembic
+      - POSTGRES_PASSWORD=alembic
+    ports:
+      - '5432:5432'
